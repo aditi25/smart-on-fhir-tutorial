@@ -17267,6 +17267,8 @@ function providers(fhirServiceUrl, provider, callback, errback){
   // Skip conformance statement introspection when overriding provider setting are available
   if (provider) {
     provider['url'] = fhirServiceUrl;
+    console.log("------------------");
+    console.log(fhirServiceUrl);
     process.nextTick(function(){
       callback && callback(provider);
     });
